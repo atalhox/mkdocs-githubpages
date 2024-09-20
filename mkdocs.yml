@@ -4,6 +4,7 @@ plugins:
   - mermaid2
   - search
   - social
+  - mkdocs-video
 
 theme:
   name: material

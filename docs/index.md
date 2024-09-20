@@ -90,3 +90,7 @@ graph TD;
     B -- Yes --> C[Result 1];
     B -- No --> D[Result 2];
 ```
+
+## Video
+
+![type:video](https://www.youtube.com/watch?v=3xHFCpglNxA)
