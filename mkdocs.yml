@@ -1,0 +1,7 @@
+site_name: MKDocs
+
+plugins:
+  - mermaid2
+  - search
+theme:
+  name: material
