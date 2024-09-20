@@ -25,70 +25,60 @@ Edite o arquivo mkdocs.yml para configurar o projeto conforme necessário. Exemp
 
 ```yaml
 site_name: MKDocs
+
 plugins:
   - mermaid2
-
+  - search
 theme:
   name: material
 ```
 
-## Gerar a Documentação
-
-Gere os arquivos estáticos:
-
-```bash
-mkdocs build
-```
-
 ## Configurar o Deploy com GitHub Actions
 
-Crie um arquivo `.github/workflows/deploy.yml` no seu repositório para automatizar o deploy usando GitHub Actions. Eis um exemplo de configuração:
+Crie um arquivo `.github/workflows/ci.yml` no seu repositório para automatizar o deploy usando GitHub Actions. Eis um exemplo de configuração:
 
 ```yaml
-name: Deploy MkDocs
+name: mkdocs
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check out the repository
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: |
-          pip install mkdocs
-          pip install mkdocs-material
-          pip install mkdocs-mermaid2-plugin
-
-      - name: Deploy to GitHub Pages
-        run: |
-          mkdocs gh-deploy --force
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          python-version: 3.12.6
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-material
+      - run: pip install mkdocs-mermaid2-plugin
+      - run: mkdocs gh-deploy --force
 ```
 
 ## Configurar pages
 
 - Vá até a seção `Build and deployment` de `Pages`;
 - Selecione `Deploy from a branch`;
-- Selecione também a branch `main` e o folder `/docs` e salve.
+- Selecione também a branch `gh-pages` e o folder `/` e salve.
 
 Agora basta visitar o site.
-
-## Configurar permissões
-
-Em `Workflow permissions` selecione a opção `Read and write permissions`.
 
 ## Mermaid
 
