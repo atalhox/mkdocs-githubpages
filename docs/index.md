@@ -93,4 +93,10 @@ graph TD;
 
 ## Video
 
-![type:video](https://www.youtube.com/watch?v=3xHFCpglNxA)
+Selecione um vídeo do youtube, e clique em compartilhar. Copie o conteúdo presente em `Incorporar` e cole em um arquivo de formato `.md`.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q-YA_dA8C20?si=1NTMunOJQ7ZLWPXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Emoji
+
+:smile:
