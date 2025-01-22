@@ -18,7 +18,7 @@ Este guia é destinado a:
 
 ## 4. Guia
 
-### Passo 1: Selecionar e Obter o Código de Incorporação do Vídeo
+### 4.1. Selecionar e Obter o Código de Incorporação do Vídeo
 
 1. Acesse o vídeo desejado no YouTube.
 2. Clique no botão Compartilhar localizado abaixo do vídeo.
@@ -33,7 +33,7 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
-### Passo 2: Adaptar o Código ao Formato Markdown
+### 4.2. Adaptar o Código ao Formato Markdown
 
 Como o markdown puro não suporta diretamente elementos HTML como`<iframe>`, será necessário garantir que o ambiente em que o markdown será renderizado permita HTML embutido.
 

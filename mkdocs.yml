@@ -8,9 +8,11 @@ plugins:
   - social # Permite adicionar ícones de redes sociais (mantido da configuração original)
   - git-revision-date-localized # Mostra a data da última modificação dos arquivos (baseado no Git) (novo)
   - swagger-ui-tag # Permite integrar documentação Swagger/OpenAPI diretamente no site (novo)
+  # - markdownextradata # Permite definir variáveis no arquivo mkdocs.yml e usá-las diretamente nos seus arquivos Markdown.
+  - awesome-pages # Permite criar páginas com o Awesome Pages (novo)
 
 # Endereço de desenvolvimento
-dev_addr: "127.0.0.1:8099" # Altera o endereço e porta padrão para rodar o servidor localmente (novo)
+dev_addr: "127.0.0.1:8005" # Altera o endereço e porta padrão para rodar o servidor localmente (novo)
 
 # Extensões Markdown ativadas
 markdown_extensions:
@@ -47,17 +49,36 @@ markdown_extensions:
 # Tema Material configurado
 theme:
   name: material # Define o tema como "Material for MkDocs" (mantido)
+
   palette:
-    scheme: default # Usa o esquema de cores padrão (novo)
-    primary: teal # Define a cor primária como teal (novo)
-    accent: teal # Define a cor de destaque como teal (novo)
+    - media: "(prefers-color-scheme: light)" # Tema claro
+      scheme: default
+      primary: indigo
+      accent: pink
+    - media: "(prefers-color-scheme: dark)" # Tema escuro
+      scheme: slate
+      primary: indigo
+      accent: pink
+
+  logo: "assets/images/logo.svg"
+  favicon: "assets/images/favicon.ico"
+
+  font:
+    text: "Roboto"
+    code: "Fira Code"
 
   features:
+    - palette
+
     - navigation.tabs # Mostra o caminho de navegação atual no cabeçalho (novo)
     - navigation.path # Mostra o caminho de navegação atual no cabeçalho (novo)
     - navigation.sections # Adiciona uma barra lateral com seções de navegação (novo)
     - navigation.top # Move a navegação para o topo (novo)
+
     - toc.integrate # Integra o índice gerado automaticamente ao layout (novo)
+
+    - search.highlight
+    - search.share
 
 extra:
   social: # Ícones de redes sociais (mantido)
@@ -71,3 +92,6 @@ extra:
       link: https://br.linkedin.com/in/luisfelipebrum
     - icon: fontawesome/brands/tiktok
       link: https://www.tiktok.com/eunaoeradev
+
+extra_css:
+  - styles/extra.css

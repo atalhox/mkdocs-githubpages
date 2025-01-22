@@ -1,8 +1,11 @@
-# MkDocs
+# Home
 
 ## 1. Introdução
 
 MkDocs é uma ferramenta poderosa para geração de sites estáticos de documentação. Usando arquivos em Markdown, ela permite criar documentações organizadas, atrativas e de fácil navegação. Este documento fornece uma introdução aos conceitos fundamentais do MkDocs, desde a configuração inicial até a publicação.
+
+[Começar Rápido](github-pages.md){: .md-button .md-button--primary }
+[Ver no GitHub](https://github.com/atalhox/mkdocs-githubpages){: .md-button .md-button--secondary }
 
 ## 2. Objetivo
 
