@@ -3,7 +3,7 @@ name: mkdocs-deploy
 on:
   push:
     branches:
-      - main # Executa o workflow em pushes na branch principal
+      - main
 
 permissions:
   contents: write
@@ -42,7 +42,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install mkdocs-material[imaging] mkdocs-mermaid2-plugin
+          pip install mkdocs-material[imaging] mkdocs-mermaid2-plugin git-revision-date-localized mkdocs-swagger-ui-tag
 
       # 6. Deploy para GitHub Pages
       - name: Deploy to GitHub Pages
