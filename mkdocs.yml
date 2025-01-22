@@ -10,7 +10,7 @@ plugins:
   - swagger-ui-tag # Permite integrar documentação Swagger/OpenAPI diretamente no site (novo)
 
 # Endereço de desenvolvimento
-dev_addr: "127.0.0.1:8000" # Altera o endereço e porta padrão para rodar o servidor localmente (novo)
+dev_addr: "127.0.0.1:8099" # Altera o endereço e porta padrão para rodar o servidor localmente (novo)
 
 # Extensões Markdown ativadas
 markdown_extensions:
