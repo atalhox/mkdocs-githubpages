@@ -112,7 +112,7 @@ jobs:
 
 ### 4.6. Exemplos de Recursos Adicionais
 
-#### Mermaid
+#### 4.6.1. Mermaid
 
 Renderize gráficos em Markdown utilizando o Mermaid. Exemplo:
 
@@ -123,11 +123,36 @@ graph TD;
     B -- No --> D[Result 2];
 ```
 
-#### Emojis
+#### 4.6.2. Emojis
 
 Utilize emojis para enriquecer sua documentação.
 
 Exemplo: `:smile:`= :smile:
+
+#### 4.6.3. Tabela
+
+| Produto        | Preço  | Disponibilidade |
+|----------------|--------|-----------------|
+| Camiseta       | $20.00 |  ==Em estoque==      |
+| Calça          | $35.00 | Fora de estoque |
+| Jaqueta        | $50.00 | Em estoque      |
+
+#### 4.6.4. Caixas de comunicação
+
+!!! info
+    Este é um bloco de info.
+
+!!! tip "Dica"
+    Este é um bloco de dica.
+
+!!! note "Nota do autor"
+    Este é um bloco de nota.
+
+!!! warning "Atenção"
+    Este é um aviso importante!
+
+!!! danger "Atenção"
+    Este é um aviso crítico!
 
 ## 5. Dicas
 
