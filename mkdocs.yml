@@ -60,8 +60,8 @@ theme:
       primary: indigo
       accent: pink
 
-  logo: "assets/images/logo.svg"
-  favicon: "assets/images/favicon.ico"
+  # logo: "assets/images/logo.svg"
+  # favicon: "assets/images/favicon.ico"
 
   font:
     text: "Roboto"
