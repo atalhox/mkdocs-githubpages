@@ -1,21 +1,65 @@
 site_name: MKDocs
+repo_url: https://github.com/atalhox/mkdocs-githubpages
 
+# Plugins configurados
 plugins:
-  - mermaid2
-  - search
-  - social
+  - search # Adiciona funcionalidade de busca no site gerado
+  - mermaid2 # Suporte para diagramas Mermaid diretamente nos arquivos Markdown
+  - social # Permite adicionar ícones de redes sociais (mantido da configuração original)
+  - git-revision-date-localized # Mostra a data da última modificação dos arquivos (baseado no Git) (novo)
+  - swagger-ui-tag # Permite integrar documentação Swagger/OpenAPI diretamente no site (novo)
 
+# Endereço de desenvolvimento
+dev_addr: "127.0.0.1:8000" # Altera o endereço e porta padrão para rodar o servidor localmente (novo)
+
+# Extensões Markdown ativadas
 markdown_extensions:
-  - attr_list
-  - pymdownx.emoji:
+  - attr_list # Adiciona atributos HTML em elementos Markdown, como classes e IDs (mantido)
+  - pymdownx.emoji: # Suporte a emojis
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - abbr # Permite criar abreviações no Markdown (novo)
+  - admonition # Suporte para caixas de alerta como "nota", "dica" e "perigo" (novo)
+  - def_list # Suporte para listas de definições (novo)
+  - footnotes # Adiciona suporte para rodapés no texto (novo)
+  - md_in_html # Permite usar Markdown dentro de blocos HTML (novo)
+  - toc: # Gera automaticamente um índice navegável para a página
+      permalink: true # Adiciona links permanentes nos cabeçalhos (novo)
+  - tables # Habilita suporte para tabelas no estilo Markdown (novo)
+  - pymdownx.arithmatex: # Suporte para matemática com renderização LaTeX (novo)
+      generic: true
+  - pymdownx.betterem: # Melhorias na renderização de ênfase (novo)
+      smart_enable: all
+  - pymdownx.caret # Adiciona suporte para marcação com ^texto^ (novo)
+  - pymdownx.details # Adiciona suporte para blocos de detalhes expansíveis (novo)
+  - pymdownx.highlight # Melhora a renderização de código com destaque de sintaxe (novo)
+  - pymdownx.inlinehilite # Permite destacar código inline (novo)
+  - pymdownx.keys # Renderiza combinações de teclas com estilo (novo)
+  - pymdownx.mark # Adiciona marcações no texto com `==highlight==` (novo)
+  - pymdownx.smartsymbols # Converte símbolos simples como `--` e `...` em caracteres tipográficos (novo)
+  - pymdownx.superfences # Melhora o suporte para blocos de código avançados (novo)
+  - pymdownx.tabbed: # Adiciona suporte para abas interativas no conteúdo (novo)
+      alternate_style: true # Usa um estilo alternativo para as abas
+  - pymdownx.tasklist: # Suporte para listas de tarefas (novo)
+      custom_checkbox: true # Renderiza checkboxes com estilos customizados
+  - pymdownx.tilde # Suporte para marcações com ~~texto~~ (novo)
 
+# Tema Material configurado
 theme:
-  name: material
+  name: material # Define o tema como "Material for MkDocs" (mantido)
+  palette:
+    scheme: default # Usa o esquema de cores padrão (novo)
+    primary: teal # Define a cor primária como teal (novo)
+    accent: teal # Define a cor de destaque como teal (novo)
+
+  features:
+    - navigation.path # Mostra o caminho de navegação atual no cabeçalho (novo)
+    - navigation.sections # Adiciona uma barra lateral com seções de navegação (novo)
+    - navigation.top # Move a navegação para o topo (novo)
+    - toc.integrate # Integra o índice gerado automaticamente ao layout (novo)
 
 extra:
-  social:
+  social: # Ícones de redes sociais (mantido)
     - icon: fontawesome/brands/github
       link: https://github.com/atalhox
     - icon: fontawesome/brands/twitter
