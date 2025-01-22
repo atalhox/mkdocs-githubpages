@@ -1,4 +1,4 @@
-# Como incorporar um swagger
+# Swagger
 
 ## 1. Introdução
 

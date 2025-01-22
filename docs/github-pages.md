@@ -1,4 +1,4 @@
-# Como automatizar o Github pages como Mkdocs
+# Github pages
 
 ## 1. Introdução
 

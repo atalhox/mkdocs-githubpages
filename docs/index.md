@@ -1,4 +1,4 @@
-# Mikdocs - O guia
+# MkDocs
 
 ## 1. Introdução
 

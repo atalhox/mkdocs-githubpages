@@ -53,6 +53,7 @@ theme:
     accent: teal # Define a cor de destaque como teal (novo)
 
   features:
+    - navigation.tabs # Mostra o caminho de navegação atual no cabeçalho (novo)
     - navigation.path # Mostra o caminho de navegação atual no cabeçalho (novo)
     - navigation.sections # Adiciona uma barra lateral com seções de navegação (novo)
     - navigation.top # Move a navegação para o topo (novo)
