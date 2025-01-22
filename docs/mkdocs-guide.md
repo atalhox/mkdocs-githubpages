@@ -30,7 +30,7 @@ Este documento é voltado para desenvolvedores, documentaristas e profissionais 
 
 ### 4.2. Configurar MkDocs
 
-#### Instalar o MkDocs
+#### 4.2.1. Instalar o MkDocs
 
 Se ainda não o tiver instalado, execute:
 
@@ -38,7 +38,7 @@ Se ainda não o tiver instalado, execute:
 pip install mkdocs
 ```
 
-#### Criar a Estrutura Inicial do MkDocs
+#### 4.2.2. Criar a Estrutura Inicial do MkDocs
 
 No diretório desejado, crie a estrutura básica:
 

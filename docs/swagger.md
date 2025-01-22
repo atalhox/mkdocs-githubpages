@@ -27,7 +27,7 @@ Este documento é destinado a:
 
 ### 4.2. Passo a Passo para Integração
 
-#### Passo 1: Configuração do Ambiente
+#### 4.2.1 Configuração do Ambiente
 
 Certifique-se de que o MkDocs está instalado e configurado:
 
@@ -35,7 +35,7 @@ Certifique-se de que o MkDocs está instalado e configurado:
 pip install mkdocs
 ```
 
-#### Passo 2: Estrutura de Diretórios do MkDocs
+#### 4.2.2.  Estrutura de Diretórios do MkDocs
 
 A estrutura típica do MkDocs deve conter:
 
@@ -48,7 +48,7 @@ project/
 ├── mkdocs.yml
 ```
 
-#### Passo 3: Adicionando o Swagger UI
+#### 4.2.3.  Adicionando o Swagger UI
 
 Baixe os arquivos necessários do Swagger UI:
 
@@ -68,7 +68,7 @@ project/
 │   │   └── swagger.yaml
 ```
 
-#### Passo 4: Configurando o Swagger UI
+#### 4.2.4.  Configurando o Swagger UI
 
 Crie o arquivo swagger-initializer.js com o seguinte conteúdo:
 
@@ -87,7 +87,7 @@ window.onload = function() {
 };
 ```
 
-### Passo 5: Criando a Página de API no MkDocs
+#### 4.2.5. Criando a Página de API no MkDocs
 
 Edite o arquivo mkdocs.yml para incluir o Swagger:
 
@@ -111,7 +111,7 @@ Crie o arquivo docs/api/index.md com o conteúdo:
 <script src="../swagger-ui/swagger-initializer.js"></script>
 ```
 
-### Passo 6: Testando o Projeto
+#### 4.2.6. Testando o Projeto
 
 Inicie o servidor do MkDocs:
 
@@ -123,18 +123,23 @@ Acesse a documentação no navegador em <http://127.0.0.1:8000/api/>.
 
 ## 5. Guia de Uso
 
-- Adicionar ou Atualizar Especificações: Substitua o conteúdo do arquivo swagger.yaml para atualizar as especificações da API.
-- Personalização: Modifique o layout ou o estilo do Swagger alterando os arquivos CSS ou a configuração no swagger-initializer.js.
+### 5.1. Adicionar ou atualizar especificações
 
-### Publicação
+Substitua o conteúdo do arquivo `swagger.yaml` para atualizar as especificações da API
 
-Gere os arquivos estáticos do MkDocs:
+### 5.2.  Personalização
+
+Modifique o layout ou o estilo do Swagger alterando os arquivos CSS ou a configuração no `swagger-initializer.js`
+
+### 5.3. Gere os arquivos estáticos do MkDocs
 
 ```bash
 mkdocs build
 ```
 
-Publique os arquivos em qualquer servidor de hospedagem, como GitHub Pages ou Netlify.
+### 5.4. Publique os arquivos
+
+Publique os arquivos em qualquer servidor de hospedagem, como GitHub Pages ou Netlify
 
 ## 6. Anexos
 
