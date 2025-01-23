@@ -45,7 +45,7 @@ title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; cli
 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ```
 
-### Passo 3: Salvar o Arquivo
+### 4.3 Salvar o Arquivo
 
 - Salve o arquivo com a extensão `.md` (ex.: video_tutorial.md).
 - Certifique-se de testar a renderização em um visualizador de markdown que suporte HTML embutido.
