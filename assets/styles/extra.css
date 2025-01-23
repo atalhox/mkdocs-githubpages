@@ -1,0 +1,28 @@
+/* Personalização de botões */
+.md-button {
+  background-color: #6200ea; /* Roxo Material Design */
+  color: #ffffff; /* Texto branco para contraste */
+  border-radius: 4px; /* Bordas levemente arredondadas */
+  font-weight: 500; /* Peso médio para o texto */
+  padding: 8px 16px; /* Espaçamento interno padrão */
+  text-transform: uppercase; /* Texto em maiúsculas, como no Material Design */
+  transition: background-color 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.md-button:hover {
+  background-color: #3700b3; /* Tom mais escuro no hover */
+  color: #ffffff; /* Mantém o texto branco */
+}
+
+/* Estilo para links */
+a {
+  color: #1e88e5; /* Azul Material Design para links */
+  text-decoration: none; /* Sem sublinhado por padrão */
+  font-weight: 500; /* Peso médio para consistência com os botões */
+  transition: color 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+a:hover {
+  color: #1565c0; /* Azul mais escuro no hover */
+  text-decoration: underline; /* Adiciona sublinhado no hover */
+}
